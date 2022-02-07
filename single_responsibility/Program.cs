@@ -5,6 +5,7 @@ namespace SingleResponsibility
   // single responsibility:
   // Any particular class should have just a single reason to change(has specific job to do)
   // all methods in the class are related to the class
+  // Seperation of concerns - different classes handling different, independent tasks
   public class Journal
   {
     private readonly List<string> entries = new List<string>();

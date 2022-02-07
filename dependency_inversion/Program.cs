@@ -1,6 +1,7 @@
 ﻿namespace DependencyInversion
 {
   // Dependency Inversion:
+  // High-level module should NOT depends on low-level module, use Abstractions
   // If the high level module wanna access the data of the low level module,
   // we make the high level module depends on "abstraction interface" instead of directly
   // depending on the low level module. Such that the low level module can change it's

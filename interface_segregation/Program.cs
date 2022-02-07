@@ -1,7 +1,8 @@
 ﻿namespace InterfaceSegregation
 {
   // Interface Segregation:
-  // Interface is too large and some classes just need some of the fields of the interface
+  // Don't put too much into an interfce, split it!
+  // Interface is too large and if some classes just need some of the fields of the interface?
   // When we design interface, we need to segerate(aka. split) interface as functional as possible
   public class Document
   {

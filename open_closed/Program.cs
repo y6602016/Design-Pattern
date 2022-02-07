@@ -5,7 +5,7 @@
   // In this case, betterFilter, it should be able to extended with various filters criterias without modify the
   // innder methods in the class, we just need to create new specification classes for betterFilter to use
   // The bad filter needs to create multiple similar methods to do various filter, which is bad!
-  // How to achieve it? We can inherent Interface!
+  // How to achieve it? We can extend the class by inherenting Interface!
   public class Program
   {
     //=== Interface ===
@@ -167,7 +167,7 @@
       System.Console.WriteLine("Large blue items");
       foreach (var p in bf.Filter(
         products,
-        new AndSpecification<Product>(
+        new AndSpecification<Product>( // use instance of AndSpecification class as ISpecification<Product>
           new ColorSpecification(Color.Blue),
           new SizeSpecification(Size.Large))))
       {

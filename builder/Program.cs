@@ -31,7 +31,7 @@ namespace DotNetDesignPatternDemos.Creational.Builder
 
       if (!string.IsNullOrWhiteSpace(Text))
       {
-        sb.Append(new string(' ', indentSize * indent + 1));
+        sb.Append(new string(' ', indentSize * (indent + 1)));
         sb.Append(Text);
         sb.Append("\n");
       }

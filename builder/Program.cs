@@ -69,6 +69,14 @@ namespace DotNetDesignPatternDemos.Creational.Builder
       root.Elements.Add(e);
     }
 
+    // fluent
+    public HtmlBuilder AddChildFluent(string childName, string childText)
+    {
+      var e = new HtmlElement(childName, childText);
+      root.Elements.Add(e);
+      return this;
+    }
+
     public override string ToString()
     {
       return root.ToString();
@@ -111,13 +119,13 @@ namespace DotNetDesignPatternDemos.Creational.Builder
       var builder = new HtmlBuilder("ul");
       builder.AddChild("li", "hello");
       builder.AddChild("li", "world");
-      WriteLine(builder.ToString());
+      WriteLine(builder);
 
-      // // fluent builder
-      // sb.Clear();
-      // builder.Clear(); // disengage builder from the object it's building, then...
-      // builder.AddChildFluent("li", "hello").AddChildFluent("li", "world");
-      // WriteLine(builder);
+      // fluent builder
+      sb.Clear();
+      builder.Clear(); // disengage builder from the object it's building, then...
+      builder.AddChildFluent("li", "hello").AddChildFluent("li", "world");
+      WriteLine(builder);
     }
   }
 }

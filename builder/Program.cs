@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using static System.Console;
 
 namespace DotNetDesignPatternDemos.Creational.Builder
 {
+
+  // Builder:
+  // If there are too many setups in an constructor, we can use builder. Builder
+  // even can chain the operations
   public class HtmlElement
   {
     public string Name, Text;
